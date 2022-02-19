@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+
+import Layout from './Layout';
+import Reducer from './Reducer';
 function App() {
 
   const [state, setstate] = useState({
@@ -20,6 +23,11 @@ function App() {
         
      })
   }
+
+  useEffect(()=>{
+    console.log("Component is rendered")
+  }, [])
+
 
 
   return (
@@ -43,6 +51,8 @@ function App() {
         usage: { state.usage }
         <button onClick={ handleClick }>Click</button>
       </header>
+      <Layout></Layout>
+      <Reducer></Reducer>
     </div>
   );
 }
