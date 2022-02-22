@@ -4,6 +4,9 @@ import { useState, useEffect } from 'react';
 
 import Layout from './Layout';
 import Reducer from './Reducer';
+import Context from './Context';
+import Memo from './Memo';
+import Callback from './Callback';
 function App() {
 
   const [state, setstate] = useState({
@@ -52,7 +55,10 @@ function App() {
         <button onClick={ handleClick }>Click</button>
       </header>
       <Layout></Layout>
-      <Reducer></Reducer>
+      <Reducer title="info"></Reducer>
+      <Context></Context>
+      <Memo></Memo>
+      <Callback></Callback>
     </div>
   );
 }

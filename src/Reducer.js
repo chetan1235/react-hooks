@@ -20,12 +20,20 @@ function Reducer() {
     const initialState = { count: 0};
 
     const [state, dispatch] = useReducer(reducer_effect, initialState);
-    
+
     return (
         <>
         Count: {state.count}
         <button onClick={() => dispatch({type: 'increment'})}>+</button>
         <button onClick={() => dispatch({type: 'decrement'})}>-</button>
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
         </>
     );
 }
